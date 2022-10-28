@@ -17,10 +17,10 @@ public class DataProviderManager {
         return data;
     }
 
-    @DataProvider(name = "data_provider_login_from_excel_multy_excel", parallel = true)
-    public Object[][] dataLoginHRMFromExcelMultyRow() {
-        ExcelHelpers excelHelpers = new ExcelHelpers();
-        Object[][] data = excelHelpers.getDataHashTable(Helpers.getCurrentDir() + "dataTest/Login.xlsx", "sheet1", 1, 3);
-        return data;
-    }
+//    @DataProvider(name = "data_provider_login_from_excel_multy_excel", parallel = true)
+//    public Object[][] dataLoginHRMFromExcelMultyRow() {
+//        ExcelHelpers excelHelpers = new ExcelHelpers();
+//        Object[][] data = excelHelpers.getDataHashTable(Helpers.getCurrentDir() + "dataTest/Login.xlsx", "sheet1", 1, 3);
+//        return data;
+//    }
 }
