@@ -4,6 +4,7 @@ import ngan.xd.driver.DriverManager;
 import ngan.xd.helpers.PropertiesHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -62,6 +63,15 @@ public class WebUI {
         sleep(STEP_TIME);
         highLightElement(by);
         getWebElement(by).sendKeys(value);
+    }
+
+    public static void setTextEnter(By by, String value) {
+
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        sleep(STEP_TIME);
+        highLightElement(by);
+        getWebElement(by).sendKeys(value, Keys.ENTER);
     }
 
     public static void waitForElementClick(By by) {

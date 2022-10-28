@@ -10,7 +10,7 @@ public class ClientCRMTest extends BaseTest {
         ClientCRMPage clientCRMPage = new ClientCRMPage();
         clientCRMPage.signIn();
         clientCRMPage.openClientPage();
-        clientCRMPage.selectClientGroup("Gold");
-        clientCRMPage.checkSearchTableByColumn(4, "Gold");
+        clientCRMPage.selectClientGroup("Vip");
+        clientCRMPage.checkSearchTableByColumn(4, "Vip");
     }
 }

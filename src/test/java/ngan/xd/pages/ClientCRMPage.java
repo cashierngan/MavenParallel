@@ -34,8 +34,7 @@ public class ClientCRMPage {
         WebUI.clickElement(itemAll);
         WebUI.waitForPageLoaded();
         WebUI.clickElement(dropdownClientGroups);
-        WebUI.setText(inputClientGroups, clientGroup);
-        WebUI.pressENTER();
+        WebUI.setTextEnter(inputClientGroups, clientGroup);
     }
 
     public void checkSearchTableByColumn(int column, String value) {
@@ -54,7 +53,7 @@ public class ClientCRMPage {
 
             System.out.print(value + " - ");
             System.out.println(elementCheck.getText());
-            Assert.assertEquals(elementCheck.getText(), value, "Dòng số " + i + " không chứa giá trị tìm kiếm.");
+            Assert.assertEquals(elementCheck.getText().toUpperCase(), value.toUpperCase(), "Dòng số " + i + " không chứa giá trị tìm kiếm.");
         }
 
     }
