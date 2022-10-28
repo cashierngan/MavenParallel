@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Parallel Suite All" verbose="1" parallel="tests">
+
+    <test name="Parallel test Chrome">
+        <classes>
+            <class name="ngan.xd.LearnParallel.ChromeTest"/>
+        </classes>
+    </test>
+
+    <test name="Parallel test Edge">
+        <classes>
+            <class name="ngan.xd.LearnParallel.EdgeTest"/>
+        </classes>
+    </test>
+
+</suite>
+
+        <!--// có thể chạy 2 browser  cùng lúc cho 2 test song song-->
